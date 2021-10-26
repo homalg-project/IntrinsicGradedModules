@@ -7,7 +7,7 @@
                multiple presentations and the notion of elements [101X
   
   
-                                   2021.10-01
+                                   2021.10-02
   
   
                                 26 October 2021
@@ -69,6 +69,7 @@
       1.3-8 NaturalTransformationFromIdentityToDoubleGradedDualRight
     1.4 [33X[0;0YGAP categories[133X
       1.4-1 IsCategoryOfHomalgGradedModules
+    1.5 [33X[0;0YExamples[133X
   
   
   [32X

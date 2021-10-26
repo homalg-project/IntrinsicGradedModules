@@ -212,3 +212,74 @@
   [33X[1;0Y[29X[2XIsCategoryOfHomalgGradedModules[102X( [3Xarg[103X ) [32X filter[133X
   [6XReturns:[106X  [33X[0;10Y[10Xtrue[110X or [10Xfalse[110X[133X
   
+  
+  [1X1.5 [33X[0;0YExamples[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XQ := GradedRing( HomalgFieldOfRationalsInSingular( ) );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[28X(weights: yet unset)[128X[104X
+    [4X[25Xgap>[125X [27XS := Q["x,y,z"];[127X[104X
+    [4X[28XQ[x,y,z][128X[104X
+    [4X[28X(weights: yet unset)[128X[104X
+    [4X[25Xgap>[125X [27XA := CategoryOfHomalgFinitelyPresentedGradedLeftModules( S );[127X[104X
+    [4X[28XIntrinsicCategory( CategoryWithAmbientObjects( Freyd( GradedRows([128X[104X
+    [4X[28XQ[x,y,z] (with weights [ 1, 1, 1 ]) ) ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xmat := HomalgMatrix( "[ 0, z, -y,  -z, 0, x,  y, -x, 0 ]", 3, 3, S );[127X[104X
+    [4X[28X<A 3 x 3 matrix over a graded ring>[128X[104X
+    [4X[25Xgap>[125X [27Xphi := GradedMap( mat, "left", S );[127X[104X
+    [4X[28X<A homomorphism of left graded modules>[128X[104X
+    [4X[25Xgap>[125X [27XIsWellDefined( phi );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27Xphi;[127X[104X
+    [4X[28X<A homomorphism of left graded modules>[128X[104X
+    [4X[25Xgap>[125X [27XN := CokernelObject( phi );[127X[104X
+    [4X[28X<A graded left module presented by 3 relations for 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( N );[127X[104X
+    [4X[28X0, z, -y,[128X[104X
+    [4X[28X-z,0, x,[128X[104X
+    [4X[28Xy, -x,0[128X[104X
+    [4X[28X(over a graded ring)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XCokernel of the map[128X[104X
+    [4X[28X[128X[104X
+    [4X[28XR^(1x3) --> R^(1x3), ( for R := Q[x,y,z] (with weights [ 1, 1, 1 ]) )[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xcurrently represented by the above matrix[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X(graded, degrees of generators: [ 0, 0, 0 ])[128X[104X
+    [4X[25Xgap>[125X [27XH := InternalHomOnObjects( N, N );[127X[104X
+    [4X[28X<A graded left module presented by 2 relations for 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XM := LeftPresentationWithDegrees( mat );[127X[104X
+    [4X[28X<A graded left module presented by 3 relations for 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XIsWellDefined( M );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27X1 * S;[127X[104X
+    [4X[28X<The graded free left module of rank 1 on a free generator>[128X[104X
+    [4X[25Xgap>[125X [27X0 * S;[127X[104X
+    [4X[28X<A graded zero left module>[128X[104X
+    [4X[25Xgap>[125X [27XZeroObject( A );[127X[104X
+    [4X[28X<A graded zero left module>[128X[104X
+    [4X[25Xgap>[125X [27X0 * S = ZeroObject( A );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XMs := DualOnObjects( M );[127X[104X
+    [4X[28X<A graded free left module of rank 1 on a free generator>[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( Ms );[127X[104X
+    [4X[28XQ[x,y,z] (with weights [ 1, 1, 1 ])^(1 x 1)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X(graded, degree of generator: 1)[128X[104X
+    [4X[25Xgap>[125X [27Xpi := EpimorphismFromSomeProjectiveObject( M );[127X[104X
+    [4X[28X<A homomorphism of left graded modules>[128X[104X
+    [4X[25Xgap>[125X [27XIsWellDefined( pi );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XDisplay( pi );[127X[104X
+    [4X[28X1,0,0,[128X[104X
+    [4X[28X0,1,0,[128X[104X
+    [4X[28X0,0,1[128X[104X
+    [4X[28X(over a graded ring)[128X[104X
+    [4X[28X[128X[104X
+    [4X[28Xthe graded map is currently represented by the above 3 x 3 matrix[128X[104X
+    [4X[28X[128X[104X
+    [4X[28X(degrees of generators of target: [ 0, 0, 0 ])[128X[104X
+  [4X[32X[104X
+  

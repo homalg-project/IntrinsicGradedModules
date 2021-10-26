@@ -61,6 +61,9 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X86B59B7D794862D4">1.4-1 IsCategoryOfHomalgGradedModules</a></span>
 </div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X7A489A5D79DA9E5C">1.5 <span class="Heading">Examples</span></a>
+</span>
+</div>
 </div>
 
 <h3>1 <span class="Heading">Categories of finitely presented graded modules</span></h3>
@@ -285,6 +288,79 @@
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCategoryOfHomalgGradedModules</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;filter&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="code">true</code> or <code class="code">false</code></p>
+
+<p><a id="X7A489A5D79DA9E5C" name="X7A489A5D79DA9E5C"></a></p>
+
+<h4>1.5 <span class="Heading">Examples</span></h4>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Q := GradedRing( HomalgFieldOfRationalsInSingular( ) );</span>
+Q
+(weights: yet unset)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := Q["x,y,z"];</span>
+Q[x,y,z]
+(weights: yet unset)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := CategoryOfHomalgFinitelyPresentedGradedLeftModules( S );</span>
+IntrinsicCategory( CategoryWithAmbientObjects( Freyd( GradedRows(
+Q[x,y,z] (with weights [ 1, 1, 1 ]) ) ) ) )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat := HomalgMatrix( "[ 0, z, -y,  -z, 0, x,  y, -x, 0 ]", 3, 3, S );</span>
+&lt;A 3 x 3 matrix over a graded ring&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi := GradedMap( mat, "left", S );</span>
+&lt;A homomorphism of left graded modules&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( phi );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi;</span>
+&lt;A homomorphism of left graded modules&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">N := CokernelObject( phi );</span>
+&lt;A graded left module presented by 3 relations for 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( N );</span>
+0, z, -y,
+-z,0, x,
+y, -x,0
+(over a graded ring)
+
+Cokernel of the map
+
+R^(1x3) --&gt; R^(1x3), ( for R := Q[x,y,z] (with weights [ 1, 1, 1 ]) )
+
+currently represented by the above matrix
+
+(graded, degrees of generators: [ 0, 0, 0 ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := InternalHomOnObjects( N, N );</span>
+&lt;A graded left module presented by 2 relations for 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := LeftPresentationWithDegrees( mat );</span>
+&lt;A graded left module presented by 3 relations for 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( M );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">1 * S;</span>
+&lt;The graded free left module of rank 1 on a free generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">0 * S;</span>
+&lt;A graded zero left module&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ZeroObject( A );</span>
+&lt;A graded zero left module&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">0 * S = ZeroObject( A );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Ms := DualOnObjects( M );</span>
+&lt;A graded free left module of rank 1 on a free generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( Ms );</span>
+Q[x,y,z] (with weights [ 1, 1, 1 ])^(1 x 1)
+
+(graded, degree of generator: 1)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pi := EpimorphismFromSomeProjectiveObject( M );</span>
+&lt;A homomorphism of left graded modules&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( pi );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( pi );</span>
+1,0,0,
+0,1,0,
+0,0,1
+(over a graded ring)
+
+the graded map is currently represented by the above 3 x 3 matrix
+
+(degrees of generators of target: [ 0, 0, 0 ])
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapInd.html">[Next Chapter]</a>&nbsp;  </div>
