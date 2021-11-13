@@ -11,9 +11,9 @@ SetPackageInfo( rec(
 PackageName := "IntrinsicGradedModules",
 Subtitle := "Finitely presented graded modules over computable graded rings allowing multiple presentations and the notion of elements",
 
-Version := "2021.11-02",
-Date := "12/11/2021",
-Date := "12/11/2021",
+Version := "2021.11-03",
+Date := "13/11/2021",
+Date := "13/11/2021",
 License := "GPL-2.0-or-later",
 
 Persons := [
