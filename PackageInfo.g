@@ -11,9 +11,9 @@ SetPackageInfo( rec(
 PackageName := "IntrinsicGradedModules",
 Subtitle := "Finitely presented graded modules over computable graded rings allowing multiple presentations and the notion of elements",
 
-Version := "2021.12-02",
-Date := "22/12/2021",
-Date := "22/12/2021",
+Version := "2022.07-01",
+Date := "05/07/2022",
+Date := "05/07/2022",
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -83,7 +83,7 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">= 4.8",
+  GAP := ">= 4.11.1",
   NeededOtherPackages := [ [ "GAPDoc", ">= 1.5" ],
                    [ "MatricesForHomalg", ">= 2017.03.15" ],
                    [ "Modules", ">= 2021.04-01" ],
